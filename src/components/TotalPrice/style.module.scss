@@ -1,0 +1,27 @@
+@import '../../styles/mixins.scss';
+
+.check{
+    margin-bottom: 98px;
+    margin-top: 20px;
+    padding: 12px 0px;
+}
+
+.total_price{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #F2F2F2;
+    padding-top: 12px;
+    margin-top: 12px;
+    @include par(bold, 24px, 32px,#333);
+}
+.price__item{
+    display: flex;
+    justify-content: space-between;
+    span{
+        @include par(500, 16px, 25px,#333);
+
+    }
+    .promo{
+        color: #E5243F ;
+    }
+}

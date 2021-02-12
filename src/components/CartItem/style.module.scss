@@ -1,0 +1,90 @@
+@import '../../styles/mixins.scss';
+
+.cart_item{
+    display: flex;
+    align-items: center;
+    margin-left: -10px;
+    padding: 12px 0px;
+    
+}
+.item__img{
+    max-width: 20%;
+    img{
+        width: 100%;
+    }
+}
+.item__content{
+    max-width: 50%;
+}
+.content__title{
+    word-wrap: break-word;
+    @include par(400,14px,16px,#333);
+    padding-bottom: 5px;
+}
+.alert{
+    text-align: center;
+    
+    @include par(500,8px,16px,#333);
+    padding:4px 2px;
+    border-radius: 3px;
+    background: #FFEBBF;
+    .bold_text{
+        @include par(700,8px,16px,#333);
+    }
+    .old_price{
+        text-decoration: line-through;
+    }
+}
+.price_container{
+    padding-top: 4px;
+    .price{
+        @include par(700,12px,20px,#333);
+    }
+    .one_item_price{
+        @include par(500,12px,16px,#878786);
+    }
+}
+
+.item__controls{
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    align-items: center;
+    justify-content: right;
+    .controls__delete {
+        padding: 6px 10px 6px 10px;
+        background: #F2F2F2;
+        transition: all .2s linear;
+        border: none;
+        border-radius: 100%;
+        cursor: pointer;
+        img{
+            width: 9px;
+            height: 10px;
+            line-height: 0;
+        }
+        &:hover{
+            background: darken(#F2F2F2, 10%);
+        }
+    }
+    
+    .controls__quantity{  
+        padding: 0 5px;
+        @include par(500,14px,16px,#333);
+    }
+    .controls__add{
+        cursor: pointer;
+        padding: 6px 8px 4px 8px;
+        background: #FFBC41;
+        transition: all .2s linear;
+        border: none;
+        border-radius: 100%;
+        &:hover{
+            background: darken(#FFBC41, 20%);
+        }
+    }
+    .add_text{
+        @include par(700,14px,20px,#FFBC41);
+        margin-right: 5px;
+    }
+}
